@@ -66,8 +66,9 @@ People wanting to connect to the server will need three things:
 2. World of Warcraft 1.12.1 client (use one of the links [here](https://elysium-project.org/howtoplay/en))
 3. Edit realmlist.wtf in the Warcraft World of Warcraft 1.12.1 client to include `set realmlist <zerotier container ip>`
 
-Thats it - [here](https://www.reaper-x.com/2007/09/21/wow-mangos-gm-game-master-commands/) are all of the gm commands to administer your server.
-
 ### Security
 
 Take a look [here](https://blog.reconinfosec.com/locking-down-zerotier/) for how to restrict access to your container using Zerotiers network flow rules.
+
+
+Thats it - [here](https://www.reaper-x.com/2007/09/21/wow-mangos-gm-game-master-commands/) are all of the gm commands to administer your server.
