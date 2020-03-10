@@ -68,3 +68,6 @@ People wanting to connect to the server will need three things:
 
 Thats it - [here](https://www.reaper-x.com/2007/09/21/wow-mangos-gm-game-master-commands/) are all of the gm commands to administer your server.
 
+### Security
+
+Take a look [here](https://blog.reconinfosec.com/locking-down-zerotier/) for how to restrict access to your container using Zerotiers network flow rules.
