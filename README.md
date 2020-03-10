@@ -62,7 +62,7 @@ detach from tmux using `ctrl+b then d` then `exit` to exit the container
 ### Client config
 
 People wanting to connect to the server will need three things:
-1. Access to the Zerotier network
+1. Zerotier client with access to the Zerotier network
 2. World of Warcraft 1.12.1 client (use one of the links [here](https://elysium-project.org/howtoplay/en))
 3. Edit realmlist.wtf in the Warcraft World of Warcraft 1.12.1 client to include `set realmlist <zerotier container ip>`
 
