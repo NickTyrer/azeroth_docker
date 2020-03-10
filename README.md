@@ -72,3 +72,6 @@ Take a look [here](https://blog.reconinfosec.com/locking-down-zerotier/) for how
 
 
 Thats it - [here](https://www.reaper-x.com/2007/09/21/wow-mangos-gm-game-master-commands/) are all of the gm commands to administer your server.
+
+## Sources
+[vMangos](https://github.com/vmangos/core)
