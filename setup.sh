@@ -37,5 +37,3 @@ if [[ -n \$SSH_CONNECTION ]]; then
      tmux attach -t azeroth
 fi
 EOF
-
-chmod 700 start.sh db_setup.sh
