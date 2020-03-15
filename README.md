@@ -4,7 +4,7 @@ A docker image to host your own private World of Warcraft server over a Zerotier
 
 ### Getting Started
 
-Firsty get youself a free [Zerotier](https://www.zerotier.com/) account as this server will be hosted over a zerotier network. Here is a good primer on [Zerotier](https://www.youtube.com/watch?v=Bl_Vau8wtgc) to show what we are aiming for. Once you have your account, set up a new Zerotier network and note the network id.
+Firsty get youself a free [Zerotier](https://www.zerotier.com/) account as this server will be hosted over a Zerotier network. Here is a good primer on [Zerotier](https://www.youtube.com/watch?v=Bl_Vau8wtgc) to show what we are aiming for. Once you have your account, set up a new Zerotier network and note the network id.
 
 ### Container Creation
 
