@@ -17,9 +17,9 @@ mysql -u root realmd < /opt/azeroth/core/sql/logon.sql
 mysql -u root logs < /opt/azeroth/core/sql/logs.sql
 mysql -u root characters < /opt/azeroth/core/sql/characters.sql
 mysql -u root mangos < /opt/azeroth/core/sql/world_full_*
-mysql -u root realmd < /opt/azeroth/core/sql/migrations/logon_db_updates.sql
-mysql -u root logs <   /opt/azeroth/core/sql/migrations/logs_db_updates.sql
-mysql -u root characters < /opt/azeroth/core/sql/migrations/characters_db_updates.sql
-mysql -u root mangos < /opt/azeroth/core/sql/migrations/world_db_updates.sql
+mysql -u root realmd < /opt/azeroth/core/sql/logon_db_updates.sql
+mysql -u root logs <   /opt/azeroth/core/sql/logs_db_updates.sql
+mysql -u root characters < /opt/azeroth/core/sql/characters_db_updates.sql
+mysql -u root mangos < /opt/azeroth/core/sql/world_db_updates.sql
 mysql -u root realmd -e "DELETE FROM realmlist WHERE id=1;"
 mysql -u root realmd -e "INSERT INTO realmlist (id, name, address, port, icon, realmflags, timezone, allowedSecurityLevel) VALUES ('1', 'Hellscream', '127.0.0.1', '8085', '1', '0', '1', '0');"
