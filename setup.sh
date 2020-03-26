@@ -37,3 +37,9 @@ if [[ -n \$SSH_CONNECTION ]]; then
      tmux attach -t azeroth
 fi
 EOF
+
+##CLEAN_UP
+cp /opt/azeroth/core/sql/migrations/*_db_updates.sql /opt/azeroth/core/sql/
+find /opt/azeroth/core/ -maxdepth 1 -not -name sql -not -name core -exec rm -rf {} \;
+find /opt/azeroth/core/sql/ -not -name '*.sql' -not -name sql -exec rm -rf {} \;
+rm -rf /opt/azeroth/db/
