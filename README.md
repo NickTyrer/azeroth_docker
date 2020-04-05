@@ -13,6 +13,7 @@ docker run -d \
            -e ZT_NET=<network id> \
            -v <local path for db files>:/var/lib/mysql \
            -v <local path for config files>:/opt/azeroth/etc \
+           -v <local path for honor files>:/opt/azeroth/honor \
            --cap-add=NET_ADMIN \
            --cap-add=SYS_ADMIN \
            --device /dev/net/tun \
