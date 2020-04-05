@@ -11,6 +11,7 @@ git clone https://github.com/brotalnia/database.git /opt/azeroth/db
 
 
 ##FOLDER_STRUCT
+mkdir /opt/azeroth/honor
 mkdir /opt/azeroth/core/build && cd /opt/azeroth/core/build
 cmake -DDEBUG=0 -DSUPPORTED_CLIENT_BUILD=5875 -DUSE_EXTRACTORS=0 -DCMAKE_INSTALL_PREFIX=/opt/azeroth ../ && make -j $(nproc) && make install
 7z x /opt/azeroth/db/$(find /opt/azeroth/db/ -name "*.7z" | sort -t _ -k5 -k4M -k3 | tail -n 1 | cut -d / -f 5) -o/opt/azeroth/core/sql/
@@ -24,6 +25,7 @@ mv /opt/azeroth/etc/mangosd.conf.dist /opt/azeroth/etc/mangosd.conf
 mv /opt/azeroth/etc/realmd.conf.dist /opt/azeroth/etc/realmd.conf
 sed -i 's/DataDir = "."/DataDir = "\/opt\/azeroth\/data"/ ; s/LogsDir = ""/LogsDir = "\/opt\/azeroth\/logs"/' /opt/azeroth/etc/mangosd.conf
 sed -i 's/LogsDir = ""/LogsDir = "\/opt\/azeroth\/logs"/' /opt/azeroth/etc/realmd.conf
+sed -i 's/HonorDir = ""/HonorDir = "\/opt\/azeroth\/honor"/' /opt/azeroth/etc/mangosd.conf
 cp /opt/azeroth/etc/mangosd.conf /opt/azeroth/etc/realmd.conf /opt/azeroth
 
 
