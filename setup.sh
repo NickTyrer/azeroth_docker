@@ -42,6 +42,6 @@ EOF
 
 ##CLEAN_UP
 cp /opt/azeroth/core/sql/migrations/*_db_updates.sql /opt/azeroth/core/sql/
-find /opt/azeroth/core/ -maxdepth 1 -not -name sql -not -name core -exec rm -rf {} \;
-find /opt/azeroth/core/sql/ -not -name '*.sql' -not -name sql -exec rm -rf {} \;
+find /opt/azeroth/core/ -maxdepth 1 -not -name sql -not -name core -exec rm -rf {} \; 2>/dev/null
+find /opt/azeroth/core/sql/ -not -name '*.sql' -not -name sql -exec rm -rf {} \; 2>/dev/null
 rm -rf /opt/azeroth/db/
