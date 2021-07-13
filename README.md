@@ -23,7 +23,7 @@ docker run -d \
 
 ### Join the Zerotier Network
 
-Once the container is running head back to the config page for your Zeroier network and firstly, authorise the container access to the network if you are using a private network and then note down the containers IP address (In the managed IP's column).
+Once the container is running head back to the config page for your Zeroier network and authorise the container access to the network and then note down the containers IP address (In the managed IP's column).
 
 
 ### Add a GM Account
