@@ -6,6 +6,13 @@ A docker image to host your own private Vanilla World of Warcraft server over a 
 
 Firsty get youself a free [Zerotier](https://www.zerotier.com/) account as this server will be hosted over a Zerotier network. Here is a good primer on [Zerotier](https://www.youtube.com/watch?v=Bl_Vau8wtgc) to show what we are aiming for. Once you have your account, set up a new Zerotier network and note the network id.
 
+### Image Creation
+
+```
+git clone https://github.com/NickTyrer/azeroth_docker.git && cd azeroth_docker \
+docker build -t azeroth_image .
+```
+
 ### Container Creation (Non-Persistent Databse)
 
 With this config all files will be hosted within the container (suitable for most users)
@@ -16,7 +23,7 @@ docker run -d \
            --cap-add=SYS_ADMIN \
            --device /dev/net/tun \
            --name=<container name> \
-           nicktyrer/azeroth_docker
+           azeroth_image
 ```
 
 ### Container Creation (Persistent Databse)
@@ -38,7 +45,6 @@ docker run -d \
 ### Join the Zerotier Network
 
 Once the container is running head back to the config page for your Zeroier network and authorise the container access to the network and then note down the containers IP address (In the managed IP's column).
-
 
 ### Add a GM Account
 
@@ -75,7 +81,6 @@ People wanting to connect to the server will need three things:
 ### Security
 
 Take a look [here](https://blog.reconinfosec.com/locking-down-zerotier/) for how to restrict access to your container using Zerotiers network flow rules.
-
 
 Thats it - [here](https://www.reaper-x.com/2007/09/21/wow-mangos-gm-game-master-commands/) are all of the gm commands to administer your server.
 
