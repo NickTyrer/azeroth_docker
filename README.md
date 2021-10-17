@@ -9,7 +9,7 @@ Firsty get youself a free [Zerotier](https://www.zerotier.com/) account as this 
 ### Image Creation
 
 ```
-git clone https://github.com/NickTyrer/azeroth_docker.git && cd azeroth_docker \
+git clone https://github.com/NickTyrer/azeroth_docker.git && cd azeroth_docker && \
 docker build -t azeroth_image .
 ```
 
