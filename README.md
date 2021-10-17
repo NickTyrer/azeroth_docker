@@ -6,8 +6,22 @@ A docker image to host your own private World of Warcraft server over a Zerotier
 
 Firsty get youself a free [Zerotier](https://www.zerotier.com/) account as this server will be hosted over a Zerotier network. Here is a good primer on [Zerotier](https://www.youtube.com/watch?v=Bl_Vau8wtgc) to show what we are aiming for. Once you have your account, set up a new Zerotier network and note the network id.
 
-### Container Creation
+### Container Creation (Non-Persistent Databse)
 
+With this config all files will be hosted within the container (suitable for most users)
+```
+docker run -d \ 
+           -e ZT_NET=<network id> \
+           --cap-add=NET_ADMIN \
+           --cap-add=SYS_ADMIN \
+           --device /dev/net/tun \
+           --name=<container name> \
+           nicktyrer/azeroth_docker
+```
+
+### Container Creation (Persistent Databse)
+
+With this config the database files will be created on the host
 ```
 docker run -d \ 
            -e ZT_NET=<network id> \
@@ -46,6 +60,10 @@ account create <username> <password>
 account set gmlevel <username> 6
 ```
 detach from tmux using `ctrl+b then d` then `exit` to exit the container
+
+### Management
+
+To acces the MaNGOS console just connect via SSH using the Zerotier IP address
 
 ### Client config
 
