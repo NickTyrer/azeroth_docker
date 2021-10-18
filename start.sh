@@ -32,7 +32,8 @@ sleep 10
 
 ##JOIN_ZEROTIER_NETWORK_AND_WAIT_FOR_IP_TO_BE_ASSIGNED_THEN_UPDATE_DB_WITH_ASSIGNED_IP
 zerotier-cli join $ZT_NET
-while [ -z $(ip a | grep zt | grep inet | awk '{print $2}' | cut -d / -f 1) ] ; do sleep 10; done; ZT_IP=$(ip a | grep zt | grep inet | awk '{print $2}' | cut -d / -f 1)
+while [ -z $(ip a | grep zt | grep inet | awk '{print $2}' | cut -d / -f 1) ] ; do sleep 10; done;
+ZT_IP=$(ip a | grep zt | grep inet | awk '{print $2}' | cut -d / -f 1)
 mysql -u root realmd -e "UPDATE realmlist SET address = '$ZT_IP' WHERE id = 1;"
 
 
